@@ -1,12 +1,17 @@
 .firstLevel {
 	display: grid;
+	align-items: center;
+	margin-top: 20px;
+	font-size: 18px;
+	font-weight: 500;
+	line-height: 25px;
 	grid-template-columns: 24px 1fr;
 	gap: 20px;
-	align-items: center;
-	font-weight: 500;
-	font-size: 18px;
-	line-height: 25px;
-	margin-top: 20px;
+}
+
+.firstLevelList {
+	padding: 0;
+	list-style: none;
 }
 
 .firstLevelActive,
@@ -21,23 +26,45 @@
 
 .secondLevel {
 	margin-bottom: 10px;
+	padding: 0;
 	cursor: pointer;
 	text-transform: uppercase;
 	color: var(--gray-dark);
-	font-weight: 300;
+	border: none;
+	background: none;
 	font-size: 12px;
-	line-height: 16px;
+	font-weight: 800;
 }
 
 .secondBlock {
 	margin-top: 15px;
 	margin-left: 12px;
-	padding-left: 32px;
-	border-left: 1px solid var(--gray-dark);
+	padding: 0 0 0 32px;
+	list-style: none;
+	border-left: 1px solid #DFDFDF;
 }
 
-.secondLevelBlockOpened:last-child {
-	margin-bottom: 20px;
+.secondLevelBlock {
+	display: none;
+}
+
+.secondLevelBlockOpened {
+	display: block;
+}
+
+.thirdLevel {
+	display: block;
+	margin-bottom: 10px;
+	cursor: pointer;
+	color: var(--gray-dark);
+	outline-offset: -1px;
+	font-size: 14px;
+	font-weight: 500;
+}
+
+.thirdLevelActive,
+.thirdLevel:hover {
+	color: var(--primary);
 }
 
 .thirdLevel {
